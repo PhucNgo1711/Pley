@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:tools="http://schemas.android.com/tools"
+android:background="#ff4444"
+android:orientation="vertical"
+tools:context="edu.drexel.cs.ptn32.hw2.DisplayGoogleMapsActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginBottom="20dp"
+    android:layout_marginTop="30dp">
+
+    <Button
+        android:layout_marginRight="4dp"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="1dp"
+        android:background="#ca1436"
+        android:textColor="#cacaca"
+        android:textSize="23sp"
+        android:textAllCaps="false"
+        android:gravity="center"
+        android:fontFamily="san-serif"
+        android:text="Back"
+        android:onClick="streetViewGoBack"
+        android:id="@+id/streetViewBackBtn" />
+
+
+</LinearLayout>
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/streetviewpanorama"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.SupportStreetViewPanoramaFragment"/>
+</FrameLayout>
+</LinearLayout>
